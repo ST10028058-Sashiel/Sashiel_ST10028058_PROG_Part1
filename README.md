@@ -1,19 +1,5 @@
 # Sashiel_PROG_Part1
-ReadME
-To run the application, follow these steps:
-
-Clone the repository:
-Clone this repository to your local machine using the following command:
-git clone https://github.com/your/repository.git
-
-Navigate to the project directory:
-Open a terminal or command prompt and change to the directory where you cloned the repository:
-
-cd Sashiel_PROG_Part1
-Compile and run the application:
-Compile the C# files and run the program using the following commands:
-dotnet build
-dotnet run
+ReadMe
 
 Follow the prompts:
 Once the application starts, you'll be presented with a menu. Follow the on-screen prompts to interact with the recipe management features.
