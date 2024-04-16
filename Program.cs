@@ -8,24 +8,24 @@ namespace Sashiel_PROG_Part1
         static void Main(string[] args)
         {
 
-            bool running = true;
+            bool isMenuRunning = true;
 
-            while (running)
+            while (isMenuRunning)
             {
                 Console.WriteLine("Welcome to the Recipe Application!");
                 Console.WriteLine("1. Add a Recipe");
                 Console.WriteLine("2. Exit");
                 Console.Write("Please select an option: ");
 
-                string choice = Console.ReadLine();
+                string UserIn = Console.ReadLine();
 
-                switch (choice)
+                switch (UserIn)
                 {
                     case "1":
                         AddRecipe();
                         break;
                     case "2":
-                        running = false;
+                        isMenuRunning = false;
                         break;
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -51,7 +51,7 @@ namespace Sashiel_PROG_Part1
             Ingredient[] ingredients = new Ingredient[ingredientCount];
             for (int i = 0; i < ingredientCount; i++)
             {
-                Console.WriteLine($"Enter ingredient {i + 1} details (name, unit, quantity):");
+                Console.WriteLine($"Enter ingredient {i + 1} description (name, unit, quantity):");
                 string[] details = Console.ReadLine().Split();
                 double quantity;
                 while (!double.TryParse(details[2], out quantity))
@@ -87,7 +87,7 @@ namespace Sashiel_PROG_Part1
                 string description = Console.ReadLine();
                 steps[i] = new Step { Description = description };
             }
-
+            //Recipe
             Recipe recipe = new Recipe();
             recipe.SetIngredients(ingredients);
             recipe.SetSteps(steps);
